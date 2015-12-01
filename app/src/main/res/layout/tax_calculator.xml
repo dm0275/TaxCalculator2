@@ -3,7 +3,9 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TaxCalculator">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TaxCalculator"
+    android:background="@color/grey"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,15 +23,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
         android:inputType="numberDecimal"
-        android:ems="10"
+        android:ems="8"
         android:id="@+id/inputAmount"
-        android:layout_alignTop="@+id/amountLabel"
-        android:layout_toRightOf="@+id/amountLabel"
-        android:layout_toEndOf="@+id/amountLabel"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp"
-        android:editable="true" />
+        android:editable="true"
+        android:layout_alignBottom="@+id/amountLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,6 +51,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/taxAmount"
