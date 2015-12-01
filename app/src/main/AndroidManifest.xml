@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/round_calc"
+        android:icon="@mipmap/ic_launcher"
         android:label="Simple Tax Calculator"
         android:theme="@style/AppTheme" >
         <activity

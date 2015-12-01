@@ -28,7 +28,7 @@ public class TaxCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tax_calculator);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setLogo(R.drawable.round_calc);
+        actionBar.setLogo(R.drawable.calculator2);
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
         amount = (EditText)findViewById(R.id.inputAmount);
@@ -98,7 +98,7 @@ public class TaxCalculator extends AppCompatActivity {
         }
         else if (id == R.id.action_about)
         {
-            Toast test1 = Toast.makeText(getBaseContext(), "App made by DC",Toast.LENGTH_SHORT);
+            Toast test1 = Toast.makeText(getBaseContext(), "App made by dm0275",Toast.LENGTH_SHORT);
             test1.show();
         }
 

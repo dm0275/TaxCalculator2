@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter Tax Rate:"
+        android:text="Enter Tax Percentage(%):"
         android:id="@+id/taxLabel"
         android:layout_below="@+id/inputAmount"
         android:layout_alignParentLeft="true"
@@ -46,7 +46,10 @@
         android:layout_toStartOf="@+id/inputAmount"
         android:singleLine="false"
         android:gravity="start"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false" />
 
     <EditText
         android:layout_width="wrap_content"
