@@ -50,6 +50,13 @@ public class TaxCalculator extends AppCompatActivity {
             taxTotal.setText("0.00");
             test1.show();
         }
+        else if (amount.getText().charAt(0) == '.' || tax.getText().charAt(0) == '.')
+        {
+            Toast test1 = Toast.makeText(getBaseContext(), "Please enter a number",Toast.LENGTH_SHORT);
+            taxesAmount.setText("0.00");
+            taxTotal.setText("0.00");
+            test1.show();
+        }
         else
         {
             String input = amount.getText().toString();
