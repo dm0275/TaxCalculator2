@@ -28,6 +28,7 @@
         android:ems="8"
         android:id="@+id/inputAmount"
         android:editable="true"
+        android:gravity="right"
         android:layout_alignBottom="@+id/amountLabel"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -58,6 +59,8 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/taxAmount"
+        android:gravity="right"
+        android:imeOptions="actionGo"
         android:layout_alignBottom="@+id/taxLabel"
         android:layout_alignLeft="@+id/inputAmount"
         android:layout_alignStart="@+id/inputAmount"
@@ -94,6 +97,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/taxTotal"
+        android:gravity="right"
         android:layout_alignTop="@+id/totalLabel"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -120,9 +124,22 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/taxes"
+        android:gravity="right"
         android:layout_alignTop="@+id/textView"
         android:layout_toRightOf="@+id/textView"
         android:layout_alignRight="@+id/taxTotal"
         android:layout_alignEnd="@+id/taxTotal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clearBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/taxTotal"
+        android:layout_alignEnd="@+id/taxTotal"
+        android:onClick="clearIt"
+        />
 
 </RelativeLayout>

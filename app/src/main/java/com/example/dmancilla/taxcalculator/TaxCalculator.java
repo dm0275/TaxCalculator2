@@ -5,9 +5,11 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +23,7 @@ public class TaxCalculator extends AppCompatActivity {
 
     private EditText amount, tax;
     private TextView taxTotal,taxesAmount;
-    private Button calculate;
+    private Button calculate, clearIt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,28 @@ public class TaxCalculator extends AppCompatActivity {
         taxTotal = (TextView) findViewById(R.id.taxTotal);
         calculate = (Button) findViewById(R.id.calculate);
         taxesAmount = (TextView) findViewById(R.id.taxes);
-    }
+        clearIt = (Button) findViewById(R.id.clearBtn);
 
+        tax.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handled = false;
+                if (actionId == EditorInfo.IME_ACTION_GO)
+                {
+                    calculateIt(v);
+                    handled = true;
+                }
+                return handled;
+            }
+        });
+    }
+    public void clearIt(View view)
+    {
+        tax.setText(null);
+        amount.setText(null);
+        taxesAmount.setText(null);
+        taxTotal.setText(null);
+    }
     public void calculateIt(View view)
     {
         InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
