@@ -44,8 +44,7 @@ public class TaxCalculator extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
-                if (actionId == EditorInfo.IME_ACTION_GO)
-                {
+                if (actionId == EditorInfo.IME_ACTION_GO) {
                     calculateIt(v);
                     handled = true;
                 }
@@ -72,7 +71,7 @@ public class TaxCalculator extends AppCompatActivity {
             taxTotal.setText("0.00");
             test1.show();
         }
-        else if (amount.getText().charAt(0) == '.' || tax.getText().charAt(0) == '.')
+        else if ((amount.getText().charAt(0) == '.' && amount.getText().toString().trim().length() < 2 ) || (tax.getText().charAt(0) == '.' && tax.getText().toString().trim().length() < 2))
         {
             Toast test1 = Toast.makeText(getBaseContext(), "Please enter a number",Toast.LENGTH_SHORT);
             taxesAmount.setText("0.00");
