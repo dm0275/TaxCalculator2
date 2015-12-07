@@ -67,15 +67,15 @@ public class TaxCalculator extends AppCompatActivity {
         if (amount.getText().toString().trim().length() == 0 || tax.getText().toString().trim().length() == 0)
         {
             Toast test1 = Toast.makeText(getBaseContext(), "Please fill in all fields",Toast.LENGTH_SHORT);
-            taxesAmount.setText("0.00");
-            taxTotal.setText("0.00");
+            taxesAmount.setText(null);
+            taxTotal.setText(null);
             test1.show();
         }
         else if ((amount.getText().charAt(0) == '.' && amount.getText().toString().trim().length() < 2 ) || (tax.getText().charAt(0) == '.' && tax.getText().toString().trim().length() < 2))
         {
             Toast test1 = Toast.makeText(getBaseContext(), "Please enter a number",Toast.LENGTH_SHORT);
-            taxesAmount.setText("0.00");
-            taxTotal.setText("0.00");
+            taxesAmount.setText(null);
+            taxTotal.setText(null);
             test1.show();
         }
         else
